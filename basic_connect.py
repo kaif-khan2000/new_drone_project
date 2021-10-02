@@ -60,7 +60,6 @@ def secure():
                 time.sleep(1)
             if count <= 6:
                 print("Changed to guided.....")
-<<<<<<< HEAD
 
                 vehicle.armed = True
                 while not vehicle.armed:
@@ -69,10 +68,8 @@ def secure():
                 ##lat,long = fetchNearestCoord()
                 ##point1 = LocationGlobalRelative(lat,long,10)
                 ##vehicle.simple_goto(point1)
-=======
                 ## here you can write the security measures code.
                 ## like taking it to the safe place etc.
->>>>>>> 1c63468a522e1ec934396f92d8895510d120c509
                 vehicle.simple_takeoff(2)
                 time.sleep(2)
 
