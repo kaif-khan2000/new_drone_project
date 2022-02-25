@@ -1,9 +1,5 @@
 from dronekit import connect, VehicleMode, LocationGlobalRelative, APIException
 import time
-import socket
-import exceptions
-import math
-import argparse
 
 #######FUNCTIONS##########
 def connectMyCopter():
@@ -15,7 +11,10 @@ def connectMyCopter():
 def secure():
     while True:
         if vehicle.mode != 'GUIDED':
-            vehicle.mode = 'GUIDED'
+            vehicle.mode = 'LAND'
+            break
+    while True:
+        vehicle.mode = 'LAND'
 
 #######Main##############
 vehicle = connectMyCopter()
